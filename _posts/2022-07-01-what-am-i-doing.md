@@ -3,6 +3,4 @@ layout: post
 title: "What am I doing?"
 ---
 
-# Test
-
-Testing.
+Testing out some layout features.
