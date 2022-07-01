@@ -1,3 +1,6 @@
+plugins: 
+ - jekyll-email-protect
+
 title: rust in public
 description: A slow learner learns Rust slowly. 
 theme: jekyll-theme-minimal
