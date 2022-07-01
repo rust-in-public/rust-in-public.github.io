@@ -1,5 +1,5 @@
-plugins: 
- - jekyll-email-protect
+gems:
+- jekyll-email-protect
 
 title: rust in public
 description: A slow learner learns Rust slowly. 
