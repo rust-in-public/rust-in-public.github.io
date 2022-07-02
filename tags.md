@@ -1,12 +1,13 @@
 ---
 layout: default
+title: Posts by Tag
+permalink: /tags/
 ---
 
 Posts tagged 
 {% for tag in site.tags %}
   {% assign t = tag | first %}
   {% assign posts = tag | last %}
-
 {{ t | downcase }}
 <ul>
 {% for post in posts %}
