@@ -12,5 +12,7 @@ layout: default
 {% endif %}
 -->
   <small>tags: 
-  {% for tag in page.tags %} <em><a href='/tags/#{{tag}}'>{{tag}}</a></em> {% endfor %}
+  {% for tag in page.tags %} 
+      {% capture tag_name %}{{ tag }}{% endcapture %}
+  <em><a href='/tag/{{ tag_name }}'>{{tag}}</a></em> {% endfor %}
   </small>
