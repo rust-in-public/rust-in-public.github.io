@@ -23,9 +23,9 @@ Posts tagged
 -->
 
 
-{% for category in page.tags %}
+{% for tags in page.tags %}
   {% assign moreThanOneInCategory = false %}
-  {% assign posts = site.tags[category] %}
+  {% assign posts = site.tags[tags] %}
 
   {% for post in posts %}
     {% if forloop.length > 1 %}
@@ -34,7 +34,6 @@ Posts tagged
   {% endfor %}
 
   {% if moreThanOneInCategory == true %}
-    <div class="related-posts">
       <h3>Other posts archived in “{{ category }}”</h3>
 
       <ul>
