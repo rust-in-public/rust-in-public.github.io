@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What am I doing?"
-tag: intro
+tags: intro
 ---
 
 This is always a useful question to ask. I created this blog to try to achieve a few things, but I want to focus on some quick details about myself first. I am not a programmer by trade--I have a PhD in English, and I make a living teaching English at the university level. While this might seem pretty distant from the world of Rust, I've kept an interest in programming throughout my life, and I have tried to teach myself new things whenever I have had the opportunity. I have no real great interest in creating software for other people, but I have found myself in countless situations over the years where I need to do something I cannot find a way to do, and having the ability to solve those situations with my own (usually bad) code is rewarding.
