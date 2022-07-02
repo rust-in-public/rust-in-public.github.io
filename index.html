@@ -7,11 +7,11 @@ layout: default
       {% unless post.draft %}
       <article class="post">    
 
-        
+        <small>{{ post.date | date: "%-d %B %Y" }}</small>
 
         <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
-        <small>{{ post.date | date: "%-d %B %Y" }}</small>
+        
   
         <div class="entry">
           {{ post.excerpt }}
