@@ -4,7 +4,7 @@ title: "Learning to Love Static Typing"
 tag: types
 ---
 
-While this might be remedial for some, I thought it would help to think a bit about types in Rust.
+While this might be remedial for some, I thought it would help to think a bit about types in Rust. Most of my programming experience has been with dynamically typed languages, so getting used to the way Rust handles types (and the countless type errors/conversions I've been through) seems like a good place to start thinking about what makes Rust different than what I've done in the past.
 
 Let's start with some simple code:
 
