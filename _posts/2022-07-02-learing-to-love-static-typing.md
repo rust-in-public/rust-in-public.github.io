@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Learning to Love Static Typing"
-tag: struggle types
+tag: types
 ---
 
 While this might be remedial for some, I thought it would help to think a bit about types in Rust.
