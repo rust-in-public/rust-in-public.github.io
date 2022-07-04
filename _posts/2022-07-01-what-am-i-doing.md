@@ -24,7 +24,7 @@ fn main () {
 }
 ```
 
-After binding this to a keyboard shortcut, all of the sudden I have a pretty nifty solution to my problem. Is this the *best* solution? Probably not. I am sure I can do this with a Bash script just as easily. But even with my elementary understand of Rust currently, I can solve a problem with what Rust provides, which I think is pretty neat!
+After binding this to a keyboard shortcut, all of the sudden I have a pretty nifty solution to my problem. Is this the *best* solution? Probably not. I am sure I can do this with a Bash script just as easily. But even with my elementary understanding of Rust currently, I can solve a problem with what Rust provides, which I think is pretty neat!
 
 And, while it may seem like a ridiculous reason, one of the first things I learned about Rust was that it continues to be voted the "most loved programming language" year after year. There are reasons I can understand for this, which hopefully my blog will demonstrate.
 
