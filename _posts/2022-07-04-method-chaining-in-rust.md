@@ -6,7 +6,7 @@ tag: rustlang
 
 While not unique to Rust, there are many functions in the Rust Standard Library that return ```self```. Because of this, Rust allows all kinds of method chaining, often resulting in some intimidating-looking-at-first code. As stated in [Rust Design Patterns](https://rust-unofficial.github.io/patterns/functional/index.html), Rust is an imperative language, but it allows code to be written in a functional style.
 
-As an example of this difference between imperative and declarative style, let's say we we wanted to print all even numbers in a vector. Without making use of method chaining, we might write something that looks like this:
+As an example of this difference between imperative and declarative style, let's say we wanted to print all even numbers in a vector. Without making use of method chaining, we might write something that looks like this:
 
 ```rust
 fn main() {
