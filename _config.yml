@@ -2,7 +2,7 @@ gems:
 - jekyll-email-protect
 
 title: rust in public
-description: A slow learner learns Rust slowly. 
+description: Learning Rust, with plenty of rust.
 theme: jekyll-theme-minimal
 classes: wide
 color-scheme: light
