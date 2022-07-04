@@ -38,7 +38,7 @@ Now that we are capable of iterating over the values of ```v```, we can use Rust
 
 ### What is a closure?
 
-Rust's documentation describe closures as "anonymous functions that can capture their environment." If this is hard to conceptualize, some code might help. Consider the following simple example of a closure:
+Rust's documentation describes closures as "anonymous functions that can capture their environment." If this is hard to conceptualize, some code might help. Consider the following simple example of a closure:
 
 ```rust
 fn main() {
