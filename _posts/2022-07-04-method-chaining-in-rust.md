@@ -4,9 +4,9 @@ title: "Method Chaining in Rust"
 tag: rustlang
 ---
 
-While not necessarily unique to Rust, there are many functions in the Rust Standard Library that return ```self```. Because of this, Rust allows all kinds of method chaining, often resulting in some intimidating-looking-at-first code. As stated in [Rust Design Patterns](https://rust-unofficial.github.io/patterns/functional/index.html), Rust is an imperative language, but it allows code to be written in a functional style.
+While not unique to Rust, there are many functions in the Rust Standard Library that return ```self```. Because of this, Rust allows all kinds of method chaining, often resulting in some intimidating-looking-at-first code. As stated in [Rust Design Patterns](https://rust-unofficial.github.io/patterns/functional/index.html), Rust is an imperative language, but it allows code to be written in a functional style.
 
-As an example of this difference between imperative and declarative, Let's say we we wanted to print all even numbers in a vector. Without making use of method chaining, we might write something that looks like this:
+As an example of this difference between imperative and declarative style, let's say we we wanted to print all even numbers in a vector. Without making use of method chaining, we might write something that looks like this:
 
 ```rust
 fn main() {
@@ -21,7 +21,7 @@ fn main() {
 }
 ```
 
-This code works perfectly fine, but it is imperative, and does not follow the [declarative goals of functional programming](https://kerkour.com/rust-functional-programming). In Rust, we can chain methods together to produce code in a functional style:
+This code works perfectly fine, but it is imperative, as we work step-by-step through *how* the program should do something. It does not follow the [declarative goals of functional programming](https://kerkour.com/rust-functional-programming) that ask us to describe *what* the program is doing. In Rust, we can chain methods together to produce code in a functional style:
 
 ```rust
 fn main() {
