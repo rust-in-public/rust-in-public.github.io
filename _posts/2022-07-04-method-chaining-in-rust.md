@@ -4,9 +4,9 @@ title: "Method Chaining in Rust"
 tag: rustlang
 ---
 
-While not unique to Rust, there are many functions in the Rust Standard Library that return ```self```. Because of this, Rust allows all kinds of method chaining, often resulting in some intimidating-looking-at-first code. As stated in [Rust Design Patterns](https://rust-unofficial.github.io/patterns/functional/index.html), Rust is an imperative language, but it allows code to be written in a functional style.
+While not unique to Rust, there are many functions in the Rust Standard Library that return ```self```. Because of this, Rust allows all kinds of method chaining, often resulting in some intimidating-looking-at-first code. As stated in [Rust Design Patterns](https://rust-unofficial.github.io/patterns/functional/index.html), Rust is an imperative language, but it allows code to be written in a functional, declarative style.
 
-As an example of this difference between imperative and declarative style, let's say we wanted to print all even numbers in a vector. Without making use of method chaining, we might write something that looks like this:
+As an example of this difference between imperative and declarative style, imagine we wanted to print all even numbers in a vector. Without making use of method chaining, we might write something that looks like this:
 
 ```rust
 fn main() {
@@ -30,15 +30,15 @@ fn main() {
 }
 ```
 
-There is a lot to unpack in these few lines of code! This will produce the same result as our imperative example, and do so without pushing values to a new vector and without the use of a ```for``` loop. But what is happening here? Let's break this code down a bit more.
+There is a lot to unpack in these few lines of code! This will produce the same result as our imperative example, and it will do so without pushing values to a new vector and without the use of a ```for``` loop. But what is happening here? Let's break this code down a bit more.
 
-First, we are making use of Rust's ```iter()``` method to create an iterable type from ```v```. Importantly, ```iter()``` creates a ```Iter<'a, T>``` type that only references ```T```, so what it is creating is only a reference to ```T```. This will become clearer as we work through our chained method.
+First, we are making use of Rust's ```iter()``` method to create an iterable type from ```v```. Importantly, ```iter()``` creates a ```Iter<'a, T>``` type that only references ```T```. This will become clearer as we work through our chained method.
 
-Now that we are capable of iterating over the values of ```v```, we can use Rust's ```filter()``` method. ```filter()``` is applied to the iterator we have created with our previous ```iter()``` method, but to apply a filter we need to give it something to do. To do so, we need to create a **closure**.
+Now that we are capable of iterating over the values of ```v```, we can use Rust's ```filter()``` method. ```filter()``` is applied to the iterator type we have created with our previous ```iter()``` method, but to apply a filter we need to give it something to do. To do so, we need to create a **closure**.
 
 ### What is a closure?
 
-Rust's documentation describes closures as "anonymous functions that can capture their environment." If this is hard to conceptualize, some code might help. Consider the following simple example of a closure:
+Rust's documentation describes closures as "anonymous functions that can capture their environment." If this is difficult to conceptualize, some code might help. Consider the following simple example of a closure:
 
 ```rust
 fn main() {
@@ -47,13 +47,13 @@ fn main() {
 }
 ```
 
-The variable ```add_one```, whose value is our closure, can now work like a function. Unlike a function, it can capture values from its scope. In this closure example, our closure adds one to its captured value. **Note**: unlike in functions, closures do not need type inferences, as the compiler will infer types in a closure. You could easily rewrite ```add_one``` as:
+The variable ```add_one```, whose value is our closure, can now work like a function. Unlike a function, it can capture values from its scope. In this closure example, our closure adds one to its captured value, and thus prints ```6``` as its result. **Note**: unlike in functions, closures do not need type inferences, as the compiler will infer types in a closure. You could easily rewrite ```add_one``` as:
 
 ```rust
 let add_one = |x| -> i32 { x + 1 };
 ```
 
-But it is not necessary, and Rust will happily compile either one.
+But, this is not necessary, and Rust will happily compile either one.
 
 ### Back to even numbers
 
