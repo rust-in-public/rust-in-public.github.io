@@ -39,4 +39,22 @@ To fix the special character issue, I have always just appended an '@' character
 
 My current method for generating passwords is a simple Bash script:
 
+```bash
+#!/bin/bash
+
+read -p 'Limit: ' limitvar
+read -p 'Site: ' sitevar
+read -sp 'Secret: ' secretvar
+echo
+
+if [ -z $limitvar ]
+then
+        LIMIT=64
+else
+        LIMIT=$limitvar
+fi
+
+echo -n $secretvar$sitevar | sha256sum | cut -b 1-$LIMIT | xclip -selection c
+```
+
 I wanted to create a simple password generator that can also remember sites that require specific password lengths or special characters being needed. To do this, I've started rewriting my previous Bash script as a Rust program.
